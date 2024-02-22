@@ -50,11 +50,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+<!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
+-->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -112,7 +112,7 @@ To use this Notebook properly, you will need to download the following datasets:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project can be used as a way to estimate the sales and the rating of a yet-to-be-released games, depending on some of their features.
+This project can be used as a way to estimate the sales and the rating of yet-to-be-released games, depending on some of their features.
 <!-- 
 _For more examples, please refer to the [Documentation](https://example.com)_
 -->
@@ -164,7 +164,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Benjamin Lavoie - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Benjamin Lavoie - [LinkedIn](https://www.linkedin.com/in/benjamin-lavoie/) - benji0202@gmail.com
 
 Project Link: [https://github.com/benji02/capstone_project](https://github.com/benji02/capstone_project)
 
