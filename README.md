@@ -58,9 +58,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- Write your comments here 
 ### Built With
-
+<!--
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
@@ -69,10 +68,10 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
-
+-->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
--->
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -89,9 +88,9 @@ To use this Notebook properly, you will need to download the following datasets:
   ```sh
   npm install npm@latest -g
   ```
-<!-- 
+ 
 ### Installation
-
+<!--
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
@@ -153,14 +152,14 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE 
+<!-- LICENSE -->
 ## License
-
+<!--
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
+ -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
--->
+
 
 <!-- CONTACT -->
 ## Contact
