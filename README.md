@@ -151,9 +151,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Hosting the project on a website for easy utilization
 - [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions
 
-
-And of course, updating the readme.md everytime I add new features or the project gets closer to completion.
-
+<br>
+And of course, updating the README.md everytime I add new features or the project gets closer to completion.
+<br>
 See the [open issues](https://github.com/benji02/capstone_project/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
