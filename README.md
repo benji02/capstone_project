@@ -37,7 +37,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#data-dictionary">Data Dictionary</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -53,7 +53,8 @@
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
-This project is about predicting video games sales and rating according to different features.<br>
+This project can be used as a way to estimate the sales and the rating of yet-to-be-released games, depending on some of their features.<br>
+
 For now, the features are:
 - Platform
 - Developer
@@ -129,9 +130,33 @@ Click here to install Jupyter Notebook: https://jupyter.org/install
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Data Dictionary
 
-This project can be used as a way to estimate the sales and the rating of yet-to-be-released games, depending on some of their features.
+Here are the infos on all the different columns in this project.<br>
+- Name: Title of the game
+- Platform: The platform on which the game is played (different platform = different row)
+- Publisher: The publisher of the game
+- Developer: The developer of the game
+- NA_Sales: Sales in North America (in millions)
+- PAL_Sales: Sales in Europe (in millions)
+- JP_Sales: Sales in Japan (in millions)
+- Other_Sales: Sales in other regions (in millions)
+- Global_Sales: Total number of sales (in millions)
+- Genre: Main genre of the game
+- release_date: The release date of the game
+- esrb_rating: The ESRB rating of the game
+- metascore: The score of the game on the current platform on Metacritic (on 100)
+- userscore: The user score of the game on the current platform on Metacritic (on 10)
+- critic_reviews: The number of critic reviews behind the metascore of the game
+- user_reviews: The number of user reviews behind the metascore of the game
+- num_players: The number of players that can play the game together
+- Story Focus: 'X' if the game is story-focused
+- Gameplay Focus: 'X' if the game is gameplay focused
+- Series: 'X' if the game is part of a series
+- score: The score of the game regardless of platform on Opencritic(on 100)
+- opencritic_classification: The classification of the game regardless of platform on Opencritic 
+
+
 <!-- 
 _For more examples, please refer to the [Documentation](https://example.com)_
 -->
