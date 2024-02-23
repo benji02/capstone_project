@@ -181,10 +181,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [x] Finding the right dataset(s)
 - [ ] Cleaning the dataset and filling the empty values as needed (still in the works)
-- [ ] Export a clean dataframe/CSV on Kaggle for other users
 - [ ] Trying multiple types of regression models
 - [ ] Finding the best model for the current situation
 - [ ] Training the model for maximum efficiency
+- [ ] Export a clean dataframe/CSV on Kaggle for other users
 - [ ] Hosting the project on a website for easy utilization
 - [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions
 
