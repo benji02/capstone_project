@@ -5,7 +5,7 @@
 <h3 align="center">Capstone Project</h3>
 
   <p align="center">
-    This is the final project from BrainStation's bootcamp.
+    This is my final project for BrainStation's Data Science bootcamp.
     <br />
     <a href="https://github.com/benji02/capstone_project"><strong>Explore the docs »</strong></a>
     <br />
@@ -51,10 +51,24 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <!--
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
--->
+This project is about predicting video games sales and rating according to different features.<br>
+For now, the features are:
+- Platform
+- Developer
+- Publisher
+- Previous sales
+- Genre
+- Release Date
+- ESRB Rating
+- Metascore
+- Userscore (Metacritic)
+- OpenCritic Score
+- Number of players
+- Is the game gameplay focused or is the story focused?
+- Is the game part of a series?
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -69,6 +83,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
 -->
+- Jupyter Notebook
+- Python (+ pandas, numpy, glob and more)
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -76,12 +93,11 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Since the project is made using Jupyter Notebook, you need Jupyter Notebook or a software compatible with .ipynb files.
 
 ### Prerequisites
 
-To use this Notebook properly, you will need to download the following datasets:
+Make sure you download the appropriate datasets and not just the notebook.
 
 
 * npm
@@ -105,6 +121,8 @@ To use this Notebook properly, you will need to download the following datasets:
    const API_KEY = 'ENTER YOUR API';
    ```
  -->
+
+Click here to install Jupyter Notebook: https://jupyter.org/install
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -123,12 +141,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Finding the right dataset(s)
+- [ ] Cleaning the dataset and filling the empty values as needed (still in the works)
+- [ ] Export a clean dataframe/CSV on Kaggle for other users
+- [ ] Trying multiple types of regression models
+- [ ] Finding the best model for the current situation
+- [ ] Training the model for maximum efficiency
+- [ ] Hosting the project on a website for easy utilization
+- [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/benji02/capstone_project/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,7 +169,7 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
+-->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -174,11 +196,11 @@ Project Link: [https://github.com/benji02/capstone_project](https://github.com/b
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
+<!-- 
 * []()
 * []()
 * []()
-
+ -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
