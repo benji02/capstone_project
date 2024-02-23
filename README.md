@@ -99,12 +99,13 @@ Since the project is made using Jupyter Notebook, you need Jupyter Notebook or a
 
 Make sure you download the appropriate datasets and not just the notebook.
 
-
+<!--
 * npm
   ```sh
   npm install npm@latest -g
   ```
- 
+  -->
+  
 ### Installation
 <!--
 1. Get a free API Key at [https://example.com](https://example.com)
@@ -158,7 +159,7 @@ See the [open issues](https://github.com/benji02/capstone_project/issues) for a 
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
+<!--
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
