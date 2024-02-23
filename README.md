@@ -25,7 +25,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#project-overview">Project Overview</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -49,7 +49,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Project Overview
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
@@ -69,6 +69,18 @@ For now, the features are:
 - Number of players
 - Is the game gameplay focused or is the story focused?
 - Is the game part of a series?
+<br>
+# The problem area: <br>
+Video games. I’ve been playing video games forever and it’s a subject that I love to learn more about, but also, predict about. I’m wondering if there is a way to predict a critic score as well as sales for a game when taking into consideration the publisher, the genre, the platforms and more. With my Capstone, video game companies and indie developers could evaluate which genres are popular from which publishers, for which platform and how the game will be received by critics. If possible, I would also like to evaluate the sales.
+<br><br>
+# The User: <br>
+Anybody that works in game development, small or big studios, could benefit from this. Indie developers could use this tool to see if it’s worth porting the game to another platform, if they’re releasing during a good time, if the game will sell more with this feature or this feature.
+<br><br>
+# The Big Idea: <br>
+With machine learning, it will be possible to analyze how previous games were rated according to a few criteria and then infer what could be the possible score and sales of a game. For example, looking at some games like Zelda, it’s really rare that the score will be bad. But since it’s limited to 1 system, it’s not going to sell as much as multi-platform games with a similar score. As for indie games, is it worth to stay only on PC or is it worth it to explore other platforms?
+<br><br>
+# The impact: <br>
+I believe this type of project might already be searched within big video game publishing companies. But what about smaller studios and indie developers? That could help them have an idea of what to expect when the game is out. After the release, it would also be a good way to see if the game performed as expected or better.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
