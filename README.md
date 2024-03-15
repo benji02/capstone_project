@@ -2,7 +2,7 @@
 <a name="readme-top"></a>
 
 
-<h3 align="center">Capstone Project</h3>
+<h3 align="center">Gaming Score Forecasting Model</h3>
 
   <p align="center">
     This is my final project for BrainStation's Data Science bootcamp.
@@ -53,34 +53,21 @@
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
-This project can be used as a way to estimate the sales and the rating of yet-to-be-released games, depending on some of their features.<br>
+This project can be used as a way to predict the rating of yet-to-be-released games, depending on some of their features.<br>
 
-For now, the features are:
-- Platform
-- Developer
-- Publisher
-- Previous sales
-- Genre
-- Release Date
-- ESRB Rating
-- Metascore
-- Userscore (Metacritic)
-- OpenCritic Score
-- Number of players
-- Is the game gameplay focused or is the story focused?
-- Is the game part of a series?
+
 <br>
 <b> The problem area: </b> <br>
-Video games. I’ve been playing video games forever and it’s a subject that I love to learn more about, but also, predict about. I’m wondering if there is a way to predict a critic score as well as sales for a game when taking into consideration the publisher, the genre, the platforms and more. With my Capstone, video game companies and indie developers could evaluate which genres are popular from which publishers, for which platform and how the game will be received by critics. If possible, I would also like to evaluate the sales.
+Video games. I’ve been playing video games forever and it’s a subject that I love to learn more about, but also, predict about. I’m wondering if there is a way to predict a critic score for a game when taking into consideration the publisher, the genre, the platforms and more. With my Capstone, video game companies and indie developers could evaluate which genres are popular from which publishers, for which platform and how the game will be received by critics. If possible, I would also like to evaluate the sales.
 <br><br>
 <b> The User: </b> <br>
-Anybody that works in game development, small or big studios, could benefit from this. Indie developers could use this tool to see if it’s worth porting the game to another platform, if they’re releasing during a good time, if the game will sell more with this feature or this feature.
+Anybody that works in game development, small or big studios, could benefit from this. Indie developers could use this tool to see if it’s worth porting the game to another platform, if they’re releasing during a good time, if the game will have a better score with this feature or this feature.
 <br><br>
 <b> The Big Idea: </b> <br>
-With machine learning, it will be possible to analyze how previous games were rated according to a few criteria and then infer what could be the possible score and sales of a game. For example, looking at some games like Zelda, it’s really rare that the score will be bad. But since it’s limited to 1 system, it’s not going to sell as much as multi-platform games with a similar score. As for indie games, is it worth to stay only on PC or is it worth it to explore other platforms?
+With machine learning, it will be possible to analyze how previous games were rated according to a few criteria and then infer what could be the possible score of a game. For example, looking at some games like Zelda, it’s really rare that the score will be bad.
 <br><br>
 <b> The impact: </b> <br>
-I believe this type of project might already be searched within big video game publishing companies. But what about smaller studios and indie developers? That could help them have an idea of what to expect when the game is out. After the release, it would also be a good way to see if the game performed as expected or better.
+I believe this type of project might already be available within big video game publishing companies. But what about smaller studios and indie developers? That could help them have an idea of what to expect when the game is out. After the release, it would also be a good way to see if the game performed as expected or better.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,28 +132,17 @@ Click here to install Jupyter Notebook: https://jupyter.org/install
 ## Data Dictionary
 
 Here are the infos on all the different columns in this project.<br>
-- Name: Title of the game
-- Platform: The platform on which the game is played (different platform = different row)
-- Publisher: The publisher of the game
-- Developer: The developer of the game
-- NA_Sales: Sales in North America (in millions)
-- PAL_Sales: Sales in Europe (in millions)
-- JP_Sales: Sales in Japan (in millions)
-- Other_Sales: Sales in other regions (in millions)
-- Global_Sales: Total number of sales (in millions)
-- Genre: Main genre of the game
-- release_date: The release date of the game
-- esrb_rating: The ESRB rating of the game
-- metascore: The score of the game on the current platform on Metacritic (on 100)
-- userscore: The user score of the game on the current platform on Metacritic (on 10)
-- critic_reviews: The number of critic reviews behind the metascore of the game
-- user_reviews: The number of user reviews behind the metascore of the game
-- num_players: The number of players that can play the game together
-- Story Focus: 'X' if the game is story-focused
-- Gameplay Focus: 'X' if the game is gameplay focused
-- Series: 'X' if the game is part of a series
-- score: The score of the game regardless of platform on Opencritic(on 100)
-- opencritic_classification: The classification of the game regardless of platform on Opencritic 
+
+| Feature/Column | Definition | Data type |
+|----------|----------|----------|
+| Platform | Platform the game was released on | String |
+| Developer | Developer of the game | String |
+| Publisher | Publisher of the game | String |
+| Genre | Genre of the game | String |
+| Platform_Brand | Brand of the platform (Nintendo, Sony, Microsoft, PC | String |
+| Platform_Type | Type of the platform (HomeConsole, Handheld, PC) | String |
+| Release Date | Release date | DateTime |
+| Metascore_Range | Classification: Weak, Okay or Strong | String |
 
 
 <!-- 
@@ -180,8 +156,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 
 - [x] Finding the right dataset(s)
-- [ ] Cleaning the dataset and filling the empty values as needed (still in the works)
-- [ ] Trying multiple types of regression models
+- [x] Cleaning the dataset and filling the empty values as needed (still in the works)
+- [x] Trying multiple types of prediction models
 - [ ] Finding the best model for the current situation
 - [ ] Training the model for maximum efficiency
 - [ ] Export a clean dataframe/CSV on Kaggle for other users
