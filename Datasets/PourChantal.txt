@@ -1,0 +1,50 @@
+# testing a few different models, some have been optimized, some no
+# work in progress
+
+label_encoder = LabelEncoder()
+y_train = label_encoder.fit_transform(y_train)
+y_test = label_encoder.fit_transform(y_test)
+
+# X_train, X_test, y_train, y_test = train_test_split(X_train, y_encoded,
+#                                                     test_size=0.3, stratify = y_encoded)
+
+xgb_model = XGBClassifier(colsample_bytree= 0.75,
+                          learning_rate= 0.1, max_depth= 7,
+                          n_estimators= 500, subsample= 1)
+ab_model = AdaBoostClassifier()
+rf_model = RandomForestClassifier(max_depth= None, max_features= 'sqrt',
+                                  min_samples_leaf= 1, min_samples_split= 10, n_estimators= 300)
+nn_model = MLPClassifier(hidden_layer_sizes=(5,5,5,5))
+dtc_model = DecisionTreeClassifier()
+bag_model = BaggingClassifier()
+
+xgb_model.fit(X_train, y_train)
+ab_model.fit(X_train, y_train)
+rf_model.fit(X_train, y_train)
+nn_model.fit(X_train, y_train)
+dtc_model.fit(X_train, y_train)
+bag_model.fit(X_train, y_train)
+
+
+print("Scores:")
+print(f"AdaBoost train score : {ab_model.score(X_train, y_train)}")
+print(f"AdaBoost test score: {ab_model.score(X_test, y_test)}")
+print(f"Random Forest train score: {rf_model.score(X_train, y_train)}")
+print(f"Random Forest test score: {rf_model.score(X_test, y_test)}")
+print(f"XG Boost train score: {xgb_model.score(X_train, y_train)}")
+print(f"XG Boost test score: {xgb_model.score(X_test, y_test)}")
+print(f"NN Boost train score: {nn_model.score(X_train, y_train)}")
+print(f"NN Boost test score: {nn_model.score(X_test, y_test)}")
+print(f"DecisionTreeClassifier train score: {dtc_model.score(X_train, y_train)}")
+print(f"DecisionTreeClassifier test score: {dtc_model.score(X_test, y_test)}")
+print(f"BaggingClassifier train score: {bag_model.score(X_train, y_train)}")
+print(f"BaggingClassifier test score: {bag_model.score(X_test, y_test)}")
+
+
+
+df_scores.loc[f"AdaBoost: "]=round(ab_model.score(X_test, y_test),3)
+df_scores.loc[f"Random Forest: "]=round(rf_model.score(X_test, y_test),3)
+df_scores.loc[f"XG Boost: "]=round(xgb_model.score(X_test, y_test),3)
+df_scores.loc[f"NN Boost: "]=round(nn_model.score(X_test, y_test),3)
+df_scores.loc[f"DecisionTreeClassifier: "]=round(dtc_model.score(X_test, y_test),3)
+df_scores.loc[f"BaggingClassifier: "]=round(bag_model.score(X_test, y_test),3)
