@@ -38,7 +38,8 @@
       </ul>
     </li>
     <li><a href="#data-dictionary">Data Dictionary</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#simple-roadmap">Simple Roadmap</a></li>
+    <li><a href="#detailed-roadmap">Detailed Roadmap</a></li>    
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -152,8 +153,21 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- SIMPLE ROADMAP -->
+## Simple Roadmap
+
+- [x] Finding the right dataset(s)
+- [x] Cleaning the dataset and filling the empty values as needed (still in the works)
+- [x] Trying multiple types of prediction models
+- [ ] Finding the best model for the current situation
+- [ ] Training the model for maximum efficiency
+- [ ] Export a clean dataframe/CSV on Kaggle for other users
+- [ ] Hosting the project on a website for easy utilization
+- [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions
+
+
+<!-- DETAILED ROADMAP -->
+## Detailed Roadmap
 
 - [x] Finding the right dataset(s)
 - [x] Cleaning the dataset and filling the empty values as needed (still in the works)
