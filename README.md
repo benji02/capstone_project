@@ -157,7 +157,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Simple Roadmap
 
 - [x] Finding the right dataset(s)
-- [x] Cleaning the dataset and filling the empty values as needed (still in the works)
+- [x] Cleaning the dataset and filling the empty values as needed
 - [x] Trying multiple types of prediction models
 - [ ] Finding the best model for the current situation
 - [ ] Training the model for maximum efficiency
@@ -170,8 +170,22 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Detailed Roadmap
 
 - [x] Finding the right dataset(s)
-- [x] Cleaning the dataset and filling the empty values as needed (still in the works)
+
+Finding the right dataset was difficult. When I started this project, I wanted to make it about predicting both game ratings as well as game sales. However, after checking some datasets regarding sales, it seemed like most of the datasets were incomplete. I could find more info on VGChartz, but I would have to do all of it line by line. After a few lines, I also realized that I had to search every game separately, as the data was not at the same place for all the games. And it was also hard to find the data outside of "Total Sales".
+
+I debatted still keeping sales but because of the time constraint, I decided to drop sales for now and focus on the rating prediction.
+
+- [x] Cleaning the dataset and filling the empty values as needed
+
+Just like the first point, I tried to fill the values line by line at first, when I was still working on both ratings and sales. However, I since I turned out to only find about 2000 lines of data, I deemed it incomplete and I stopped filling in the values. I also wanted to fill in the values regarding story-focused games and gameplay-focus games, but I realized that it was most of the time correlated with the genre. So I also stopped doing that.
+
+When I only kept the rows with the info in the Metacritic Score, it was about 14k and I decided it was enough.
+
 - [x] Trying multiple types of prediction models
+
+Right after I finally decided to go on with the ratings and not the sales, I threw in some models. I had to adjust the cut-off value for the categories a few times, to make it easier to categorize the games. After deciding on 3 categories, I found the sweet spots and decided to change notebook after that. The first notebook was getting long and slow and it would be better to start anew for the modelling. I transferred the first few models I did to the bottom of the new notebook and then started the pre-processing. (still in the works)
+
+
 - [ ] Finding the best model for the current situation
 - [ ] Training the model for maximum efficiency
 - [ ] Export a clean dataframe/CSV on Kaggle for other users
