@@ -468,13 +468,15 @@ if predict_button:
         prediction = model.predict(X_test_extended_with_dev)
 
         if (prediction == 0):
-            st.write('Predicted Metascore rating range: Okay')
+            st.write('Predicted Metascore rating range: Weak') 
 
         if (prediction == 1):
-            st.write('Predicted Metascore rating range: Strong')
+            st.write('Predicted Metascore rating range: Okay')
 
         if (prediction == 2):
-            st.write('Predicted Metascore rating range: Weak')    
+            st.write('Predicted Metascore rating range: Strong')
+
+
     else:
         st.write("Fill out all the required boxes to predict the rating!")
 
