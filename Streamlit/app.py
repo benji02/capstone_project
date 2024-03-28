@@ -410,10 +410,10 @@ predict_button = st.button('Predict', key='predict_button')
 
 
 if predict_button:
-    st.write(len(name))
-    st.write(len(publisher))
-    st.write(len(developer))
-    if ((len(name)>1) and (len(publisher)>1) and (len(developer)>1)):
+    st.write(len(name[0]))
+    st.write(len(publisher[0]))
+    st.write(len(developer[0]))
+    if ((len(name[0])>1) and (len(publisher[0])>1) and (len(developer[0])>1)):
                           
         # Combine all encoded features
         all_features = pd.concat([genre_df, platform_brand_df, platform_type_df, name, publisher, developer], axis=1)
