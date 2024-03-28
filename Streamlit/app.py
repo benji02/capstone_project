@@ -297,7 +297,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import nltk
-from nltk.corpus import stopwords
+nltk.download('stopwords')
 import string
 from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
