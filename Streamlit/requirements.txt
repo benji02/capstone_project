@@ -2,5 +2,5 @@ pandas
 plotly
 streamlit
 numpy
-nltk
+nltk==3.6.2
 scikit-learn
