@@ -386,8 +386,8 @@ st.header("Gaming Score Forecasting Model", divider=True, )
 
 st.subheader("Improving video game development")
 
-st.write("This is the perfect tool to predict the Metacritic score of a game. \n\
-        Enter the name, the publisher and the developer, and choose the genre, the platform type and \n\
+st.write("This is the perfect tool to predict the Metacritic score of a game.  \n\
+        Enter the name, the publisher and the developer, and choose the genre, the platform type and  \n\
         the platform type and you will get the Metascore range between Weak, Okay and Strong!")
 
 name = pd.Series([st.text_input("Name of the game")], name='name')
@@ -466,14 +466,14 @@ if predict_button:
     prediction = model.predict(X_test_extended_with_dev)
 
     if (prediction == 0):
-        st.write('Estimated rating: Okay')
+        st.write('Predicted Metascore rating range: Okay')
 
     if (prediction == 1):
-        st.write('Estimated rating: Strong')
+        st.write('Predicted Metascore rating range: Strong')
 
     if (prediction == 2):
-        st.write('Estimated rating: Weak')    
+        st.write('Predicted Metascore rating range: Weak')    
     
-st.write("Weak = Metascore rating between 0 and 68. \n \
-        Okay = Metascore rating between 69 and 78. \n \
+st.write("Weak = Metascore rating between 0 and 68.  \n \
+        Okay = Metascore rating between 69 and 78.  \n \
         Strong = Metascore rating between 79 and 100.")
