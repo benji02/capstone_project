@@ -359,13 +359,13 @@ def generate_encoded_df(label, options, prefix):
 with open('./Models/xgb_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
-with open('../Models/name.pkl', 'rb') as file:
+with open('./Models/name.pkl', 'rb') as file:
     tfidf_name = pickle.load(file)
 
-with open('../Models/publisher.pkl', 'rb') as file:
+with open('./Models/publisher.pkl', 'rb') as file:
     tfidf_publisher = pickle.load(file)
 
-with open('../Models/developer.pkl', 'rb') as file:
+with open('./Models/developer.pkl', 'rb') as file:
     tfidf_developer = pickle.load(file)
     
 # with open('robust_scaler.pkl', 'rb') as file:
