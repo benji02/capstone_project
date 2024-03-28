@@ -340,6 +340,7 @@ def my_tokenizer(sentence):
     return listofstemmed_words
 
 
+
 def generate_encoded_df(label, options, prefix):
     # UI input
     selected_option = st.selectbox(label, options=options, key=label)
@@ -381,13 +382,21 @@ platform_brand_options = ['Microsoft', 'Nintendo', 'PC', 'Sony']
 platform_type_options = ['Handheld', 'HomeConsole', 'PC']
 
 
+st.header("Gaming Score Forecasting Model", divider=True)
+
+st.header("Improving video game development")
+
+st.text("This is the perfect tool to predict the Metacritic score of a game.\
+         Enter the name, the publisher and the developer, and choose the genre, the platform type and\
+        the platform type and you will get the Metascore range between Weak, Okay and Strong!")
+
 name = pd.Series([st.text_input("Name of the game")], name='name')
 publisher = pd.Series([st.text_input("Publisher")], name='publisher')
 developer = pd.Series([st.text_input("Developer")], name='developer')
 
 
 
-st.title("Game rating prediction")
+
 
 # Generate encoded DataFrames for each input
 genre_df = generate_encoded_df("Genre", genre_options, 'Genre_')
@@ -465,3 +474,6 @@ if predict_button:
     if (prediction == 2):
         st.write('Estimated rating: Weak')    
     
+st.text("Weak = Metascore rating between 0 and 68. \n \
+        Okay = Metascore rating between 69 and 78. \n \
+        Strong = Metascore rating between 79 and 100.")
