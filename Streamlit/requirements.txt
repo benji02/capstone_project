@@ -3,4 +3,3 @@ plotly
 streamlit
 numpy
 nltk
-string
