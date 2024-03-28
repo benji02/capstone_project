@@ -3,4 +3,4 @@ plotly
 streamlit
 numpy
 nltk
-sklearn
+scikit-learn
