@@ -294,10 +294,6 @@
 # conda install streamlit , scikit-learn , pandas , matplotlib
 import streamlit as st
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle
@@ -307,7 +303,6 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
 from nltk.corpus import wordnet
-import datetime
 from sklearn.preprocessing import RobustScaler
 import math
 
