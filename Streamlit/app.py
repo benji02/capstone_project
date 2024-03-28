@@ -409,7 +409,7 @@ predict_button = st.button('Predict', key='predict_button')
 
 
 
-if predict_button:
+if (predict_button & name & publisher & developer) :
     # Combine all encoded features
     all_features = pd.concat([genre_df, platform_brand_df, platform_type_df, name, publisher, developer], axis=1)
 
@@ -473,7 +473,11 @@ if predict_button:
 
     if (prediction == 2):
         st.write('Predicted Metascore rating range: Weak')    
-    
+
+else:
+    st.write("Fill out all the required boxes to predict the rating!")
+
+
 st.write("Weak = Metascore rating between 0 and 68.  \n \
         Okay = Metascore rating between 69 and 78.  \n \
         Strong = Metascore rating between 79 and 100.")
