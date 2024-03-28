@@ -297,6 +297,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import nltk
+nltk.download('stopwords')
 import string
 from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
@@ -304,7 +305,7 @@ from nltk.corpus import wordnet
 from sklearn.preprocessing import RobustScaler
 import math
 
-nltk.download('stopwords')
+
 
 stemmer = nltk.stem.PorterStemmer()
 
