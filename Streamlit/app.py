@@ -410,6 +410,9 @@ predict_button = st.button('Predict', key='predict_button')
 
 
 if predict_button:
+    st.write(len(name))
+    st.write(len(publisher))
+    st.write(len(developer))
     if ((len(name)>1) and (len(publisher)>1) and (len(developer)>1)):
                           
         # Combine all encoded features
