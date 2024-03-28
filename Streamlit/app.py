@@ -382,11 +382,11 @@ platform_brand_options = ['Microsoft', 'Nintendo', 'PC', 'Sony']
 platform_type_options = ['Handheld', 'HomeConsole', 'PC']
 
 
-st.header("Gaming Score Forecasting Model", divider=True)
+st.header("Gaming Score Forecasting Model", divider=True, )
 
-st.header("Improving video game development")
+st.subheader("Improving video game development")
 
-st.text("This is the perfect tool to predict the Metacritic score of a game. \n\
+st.write("This is the perfect tool to predict the Metacritic score of a game. \n\
         Enter the name, the publisher and the developer, and choose the genre, the platform type and \n\
         the platform type and you will get the Metascore range between Weak, Okay and Strong!")
 
@@ -474,6 +474,6 @@ if predict_button:
     if (prediction == 2):
         st.write('Estimated rating: Weak')    
     
-st.text("Weak = Metascore rating between 0 and 68. \n \
+st.write("Weak = Metascore rating between 0 and 68. \n \
         Okay = Metascore rating between 69 and 78. \n \
         Strong = Metascore rating between 79 and 100.")
