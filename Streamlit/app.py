@@ -386,8 +386,8 @@ st.header("Gaming Score Forecasting Model", divider=True)
 
 st.header("Improving video game development")
 
-st.text("This is the perfect tool to predict the Metacritic score of a game.\
-         Enter the name, the publisher and the developer, and choose the genre, the platform type and\
+st.text("This is the perfect tool to predict the Metacritic score of a game. \n\
+        Enter the name, the publisher and the developer, and choose the genre, the platform type and \n\
         the platform type and you will get the Metascore range between Weak, Okay and Strong!")
 
 name = pd.Series([st.text_input("Name of the game")], name='name')
