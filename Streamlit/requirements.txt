@@ -1,8 +1,6 @@
 pandas
 plotly
 streamlit
-matplotlib
 numpy
-pickle
 nltk
 string
