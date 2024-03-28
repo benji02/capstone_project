@@ -409,73 +409,73 @@ predict_button = st.button('Predict', key='predict_button')
 
 
 
-if (predict_button and name and publisher and developer) :
-    # Combine all encoded features
-    all_features = pd.concat([genre_df, platform_brand_df, platform_type_df, name, publisher, developer], axis=1)
+if predict_button:
+    if (name!= "") and (publisher!="") and (developer!=""):
+        # Combine all encoded features
+        all_features = pd.concat([genre_df, platform_brand_df, platform_type_df, name, publisher, developer], axis=1)
 
-    X_test_name = tfidf_name.transform(all_features["name"])
-    # Drop the column
-    columns_to_drop = ['name']
+        X_test_name = tfidf_name.transform(all_features["name"])
+        # Drop the column
+        columns_to_drop = ['name']
 
-    # Drop multiple columns in-place
-    all_features.drop(columns=columns_to_drop, inplace=True)
+        # Drop multiple columns in-place
+        all_features.drop(columns=columns_to_drop, inplace=True)
 
-    # Add the prefix pd for ProjectDescription for columns
-    cols = [f'Name_{word}' for word in tfidf_name.get_feature_names_out()]
+        # Add the prefix pd for ProjectDescription for columns
+        cols = [f'Name_{word}' for word in tfidf_name.get_feature_names_out()]
 
-    # Join the original test dataset and positive bag of words.
-    X_test_name = pd.DataFrame(columns=cols, data=X_test_name.toarray())
-    X_test_extended_with_name = pd.concat([all_features, X_test_name], axis=1)
+        # Join the original test dataset and positive bag of words.
+        X_test_name = pd.DataFrame(columns=cols, data=X_test_name.toarray())
+        X_test_extended_with_name = pd.concat([all_features, X_test_name], axis=1)
 
-    X_test_pub = tfidf_publisher.transform(X_test_extended_with_name["publisher"])
-    # Drop the column
-    columns_to_drop = ['publisher']
+        X_test_pub = tfidf_publisher.transform(X_test_extended_with_name["publisher"])
+        # Drop the column
+        columns_to_drop = ['publisher']
 
-    # Drop multiple columns in-place
-    X_test_extended_with_name.drop(columns=columns_to_drop, inplace=True)
+        # Drop multiple columns in-place
+        X_test_extended_with_name.drop(columns=columns_to_drop, inplace=True)
 
-    # Add the prefix ap for Applicant for columns
-    cols = [f'Publisher_{word}' for word in tfidf_publisher.get_feature_names_out()]
+        # Add the prefix ap for Applicant for columns
+        cols = [f'Publisher_{word}' for word in tfidf_publisher.get_feature_names_out()]
 
-    # Join the original test dataset and positive bag of words.
-    X_test_pub = pd.DataFrame(columns=cols, data=X_test_pub.toarray())
-    X_test_extended_with_pub = pd.concat([X_test_extended_with_name, X_test_pub], axis=1)
+        # Join the original test dataset and positive bag of words.
+        X_test_pub = pd.DataFrame(columns=cols, data=X_test_pub.toarray())
+        X_test_extended_with_pub = pd.concat([X_test_extended_with_name, X_test_pub], axis=1)
 
 
-    X_test_dev = tfidf_developer.transform(X_test_extended_with_pub["developer"])
-    # Drop the column
-    columns_to_drop = ['developer']
+        X_test_dev = tfidf_developer.transform(X_test_extended_with_pub["developer"])
+        # Drop the column
+        columns_to_drop = ['developer']
 
-    # Drop multiple columns in-place
-    X_test_extended_with_pub.drop(columns=columns_to_drop, inplace=True)
+        # Drop multiple columns in-place
+        X_test_extended_with_pub.drop(columns=columns_to_drop, inplace=True)
 
-    # Add the prefix ap for Applicant for columns
-    cols = [f'Developer_{word}' for word in tfidf_developer.get_feature_names_out()]
+        # Add the prefix ap for Applicant for columns
+        cols = [f'Developer_{word}' for word in tfidf_developer.get_feature_names_out()]
 
-    # Join the original test dataset and positive bag of words.
-    X_test_dev = pd.DataFrame(columns=cols, data=X_test_dev.toarray())
-    X_test_extended_with_dev = pd.concat([X_test_extended_with_pub, X_test_dev], axis=1)
+        # Join the original test dataset and positive bag of words.
+        X_test_dev = pd.DataFrame(columns=cols, data=X_test_dev.toarray())
+        X_test_extended_with_dev = pd.concat([X_test_extended_with_pub, X_test_dev], axis=1)
 
-    print(X_test_extended_with_dev)
-    # X_test_s = scaler.transform(X_test_extended_with_ap)
+        print(X_test_extended_with_dev)
+        # X_test_s = scaler.transform(X_test_extended_with_ap)
 
-    cols_when_model_builds = model.get_booster().feature_names
-    X_test_extended_with_dev = X_test_extended_with_dev[cols_when_model_builds]
+        cols_when_model_builds = model.get_booster().feature_names
+        X_test_extended_with_dev = X_test_extended_with_dev[cols_when_model_builds]
 
-    # Make predictions
-    prediction = model.predict(X_test_extended_with_dev)
+        # Make predictions
+        prediction = model.predict(X_test_extended_with_dev)
 
-    if (prediction == 0):
-        st.write('Predicted Metascore rating range: Okay')
+        if (prediction == 0):
+            st.write('Predicted Metascore rating range: Okay')
 
-    if (prediction == 1):
-        st.write('Predicted Metascore rating range: Strong')
+        if (prediction == 1):
+            st.write('Predicted Metascore rating range: Strong')
 
-    if (prediction == 2):
-        st.write('Predicted Metascore rating range: Weak')    
-
-else:
-    st.write("Fill out all the required boxes to predict the rating!")
+        if (prediction == 2):
+            st.write('Predicted Metascore rating range: Weak')    
+    else:
+        st.write("Fill out all the required boxes to predict the rating!")
 
 
 st.write("Weak = Metascore rating between 0 and 68.  \n \
