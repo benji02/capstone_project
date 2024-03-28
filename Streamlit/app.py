@@ -386,8 +386,8 @@ st.header("Gaming Score Forecasting Model", divider=True, )
 
 st.subheader("Improving video game development")
 
-st.write("This is the perfect tool to predict the Metacritic score of a game.  \n\
-        Enter the name, the publisher and the developer, and choose the genre, the platform type and  \n\
+st.write("This is the perfect tool to predict the Metacritic score of a game. \
+        Enter the name, the publisher and the developer, and choose the genre, the platform type and \
         the platform type and you will get the Metascore range between Weak, Okay and Strong!")
 
 name = pd.Series([st.text_input("Name of the game")], name='name')
@@ -410,7 +410,7 @@ predict_button = st.button('Predict', key='predict_button')
 
 
 if predict_button:
-    if ((len(name)>1) and (len(name)>1) and (len(name)>1)):
+    if ((len(name)>1) and (len(publisher)>1) and (len(developer)>1)):
                           
         # Combine all encoded features
         all_features = pd.concat([genre_df, platform_brand_df, platform_type_df, name, publisher, developer], axis=1)
