@@ -381,9 +381,9 @@ platform_brand_options = ['Microsoft', 'Nintendo', 'PC', 'Sony']
 platform_type_options = ['Handheld', 'HomeConsole', 'PC']
 
 
-name = pd.Series([st.text_area("Name of the game")], name='name')
-publisher = pd.Series([st.text_area("Publisher")], name='publisher')
-developer = pd.Series([st.text_area("Developer")], name='developer')
+name = pd.Series([st.text_input("Name of the game")], name='name')
+publisher = pd.Series([st.text_input("Publisher")], name='publisher')
+developer = pd.Series([st.text_input("Developer")], name='developer')
 
 
 
@@ -394,7 +394,6 @@ genre_df = generate_encoded_df("Genre", genre_options, 'Genre_')
 platform_brand_df = generate_encoded_df("Platform Brand", platform_brand_options, 'Platform_Brand_')
 platform_type_df = generate_encoded_df("Platform Type", platform_type_options, 'Platform_Type_')
 
-print(genre_df)
 
 # Create a button to trigger predictions
 predict_button = st.button('Predict', key='predict_button')
