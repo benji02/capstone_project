@@ -356,7 +356,7 @@ def generate_encoded_df(label, options, prefix):
     return encoded_df
 
 # Load the models from the file
-with open('../Models/xgb_model.pkl', 'rb') as file:
+with open('./Models/xgb_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 with open('../Models/name.pkl', 'rb') as file:
