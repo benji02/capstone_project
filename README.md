@@ -8,8 +8,11 @@
     This is my final project for BrainStation's Data Science bootcamp.
     <br />
     <a href="https://github.com/benji02/capstone_project"><strong>Explore the docs »</strong></a>
+    <br/>
+    <br/>
+    Access my deployed Capstone on Streamlit with the QR Code below!
     <br />
-    <br />
+    ![QR Code](Images/qrcode.png) <br />
     <a href="https://github.com/benji02/capstone_project">View Demo</a>
     ·
     <a href="https://github.com/benji02/capstone_project/issues">Report Bug</a>
@@ -99,6 +102,13 @@ Since the project is made using Jupyter Notebook, you need Jupyter Notebook or a
 ### Prerequisites
 
 Make sure you download the appropriate datasets and not just the notebook.
+I've used a lot of dataset during the cleaning/merging part of this project.
+All of them were on Kaggle. I ultimately only kept the ones related to Metacritic.
+- [Metascore Video Games 1986-2023](https://www.kaggle.com/datasets/yilmazagca/metacritic-video-games-score-and-reviews-1986-2023) (Kaggle)
+- [Video Game Sales](https://www.kaggle.com/datasets/sandhyakrishnan02/video-game-sales?select=vgsales.csv) (Kaggle)
+- [Metacritic Games and User Reviews All Time](https://www.kaggle.com/datasets/trentenberam/metacritic-games-all-time?select=metacritic_games_master.csv) (Kaggle)
+
+All the info from those datasets that I used are from VGChartz or Metacritic.
 
 <!--
 * npm
@@ -136,13 +146,17 @@ Here are the infos on all the different columns in this project.<br>
 
 | Feature/Column | Definition | Data type |
 |----------|----------|----------|
+| Name | Name/Title of the game | String |
 | Platform | Platform the game was released on | String |
-| Developer | Developer of the game | String |
 | Publisher | Publisher of the game | String |
+| Developer | Developer of the game | String |
 | Genre | Genre of the game | String |
 | Platform_Brand | Brand of the platform (Nintendo, Sony, Microsoft, PC | String |
 | Platform_Type | Type of the platform (HomeConsole, Handheld, PC) | String |
-| Release Date | Release date | DateTime |
+| Release_Date | Release date | DateTime |
+| Release_Day | Release day | int |
+| Release_Month | Release month | int |
+| Release_Year | Release year | int |
 | Metascore_Range | Classification: Weak, Okay or Strong | String |
 
 
@@ -159,11 +173,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Finding the right dataset(s)
 - [x] Cleaning the dataset and filling the empty values as needed
 - [x] Trying multiple types of prediction models
-- [ ] Finding the best model for the current situation
-- [ ] Training the model for maximum efficiency
-- [ ] Export a clean dataframe/CSV on Kaggle for other users
-- [ ] Hosting the project on a website for easy utilization
-- [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions
+- [x] Finding the best model for the current situation
+- [x] Training the model for maximum efficiency
+- [ ] Export a clean dataframe/CSV on Kaggle for other users (Cancelled)
+- [x] Hosting the project on a website for easy utilization ([Link](https://capstoneproject-benji02.streamlit.app)
+- [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions (Work in progress)
 
 
 <!-- DETAILED ROADMAP -->
@@ -186,11 +200,29 @@ When I only kept the rows with the info in the Metacritic Score, it was about 14
 Right after I finally decided to go on with the ratings and not the sales, I threw in some models. I had to adjust the cut-off value for the categories a few times, to make it easier to categorize the games. After deciding on 3 categories, I found the sweet spots and decided to change notebook after that. The first notebook was getting long and slow and it would be better to start anew for the modelling. I transferred the first few models I did to the bottom of the new notebook and then started the pre-processing. (still in the works)
 
 
-- [ ] Finding the best model for the current situation
-- [ ] Training the model for maximum efficiency
-- [ ] Export a clean dataframe/CSV on Kaggle for other users
-- [ ] Hosting the project on a website for easy utilization
-- [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions
+- [x] Finding the best model for the current situation
+
+After a good amount of trial and error, the best model that would't cause overfitting was "XG Boost" 
+
+
+- [x] Training the model for maximum efficiency
+
+I wanted to do a lot for training my model. However, due to limited time and computer power, I wasn't able to train it as much as I wanted. However. I was able to improve it by a few percents while testing hyperparameters, while not overfitting too much. With an accuracy of 61.6%, I am satisfied.
+
+
+- [ ] Export a clean dataframe/CSV on Kaggle for other users (Cancelled)
+
+This step was ultimately cancelled.
+
+Because I did a lot of work "by-hand" and because I had to join a few datasets (some who had "unknown" in Publisher and/or Developer), I don't feel like the dataset is perfect. For that reason, I won't be putting the dataset on Kaggle. However, it is available on my Github.
+
+
+- [x] Hosting the project on a website for easy utilization
+
+While I don't feel comfortable sharing the dataset at large, I still decided to deploy my Forecasting Model online, on Sreamlit. [Click here](https://capstoneproject-benji02.streamlit.app) to access it.
+
+
+- [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions (Work in progress)
 
 <br>
 And of course, updating the README.md everytime I add new features or the project gets closer to completion.
@@ -234,6 +266,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Benjamin Lavoie - [LinkedIn](https://www.linkedin.com/in/benjamin-lavoie/) - benji0202@gmail.com
 
 Project Link: [https://github.com/benji02/capstone_project](https://github.com/benji02/capstone_project)
+
+Deployed Project Link: https://capstoneproject-benji02.streamlit.app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
