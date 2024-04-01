@@ -175,7 +175,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Finding the best model for the current situation
 - [x] Training the model for maximum efficiency
 - [ ] Export a clean dataframe/CSV on Kaggle for other users (Cancelled)
-- [x] Hosting the project on a website for easy utilization ([Link](https://capstoneproject-benji02.streamlit.app)
+- [x] Hosting the project on a website for easy utilization ([Link](https://capstoneproject-benji02.streamlit.app))
 - [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions (Work in progress)
 
 
