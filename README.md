@@ -2,26 +2,25 @@
 <a name="readme-top"></a>
 
 
-<h3 align="center">Gaming Score Forecasting Model</h3>
+<h2 align="center">Gaming Score Forecasting Model</h2>
 
   <p align="center">
+    By Benjamin Lavoie
+    <br />
+     <br />
     This is my final project for BrainStation's Data Science bootcamp.
-    <br />
-    <a href="https://github.com/benji02/capstone_project"><strong>Explore the docs »</strong></a>
     <br/>
-    <br/>
-    Access my deployed Capstone on Streamlit with the QR Code below!
+    <b> Access my deployed Capstone on Streamlit with the QR Code below! (Scan or click)</b>
     <br />
-    ![QR Code](Images/qrcode.png) <br />
-    <a href="https://github.com/benji02/capstone_project">View Demo</a>
-    ·
+    <a href=”https://capstoneproject-benji02.streamlit.app”>
+    <img src="Images/qrcode.png">
+    </a>
+    <br />
     <a href="https://github.com/benji02/capstone_project/issues">Report Bug</a>
     ·
     <a href="https://github.com/benji02/capstone_project/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -189,26 +188,33 @@ Finding the right dataset was difficult. When I started this project, I wanted t
 
 I debatted still keeping sales but because of the time constraint, I decided to drop sales for now and focus on the rating prediction.
 
+<br>
+
 - [x] Cleaning the dataset and filling the empty values as needed
 
 Just like the first point, I tried to fill the values line by line at first, when I was still working on both ratings and sales. However, I since I turned out to only find about 2000 lines of data, I deemed it incomplete and I stopped filling in the values. I also wanted to fill in the values regarding story-focused games and gameplay-focus games, but I realized that it was most of the time correlated with the genre. So I also stopped doing that.
 
 When I only kept the rows with the info in the Metacritic Score, it was about 14k and I decided it was enough.
 
+<br>
+
 - [x] Trying multiple types of prediction models
 
 Right after I finally decided to go on with the ratings and not the sales, I threw in some models. I had to adjust the cut-off value for the categories a few times, to make it easier to categorize the games. After deciding on 3 categories, I found the sweet spots and decided to change notebook after that. The first notebook was getting long and slow and it would be better to start anew for the modelling. I transferred the first few models I did to the bottom of the new notebook and then started the pre-processing. (still in the works)
 
+<br>
 
 - [x] Finding the best model for the current situation
 
 After a good amount of trial and error, the best model that would't cause overfitting was "XG Boost" 
 
+<br>
 
 - [x] Training the model for maximum efficiency
 
 I wanted to do a lot for training my model. However, due to limited time and computer power, I wasn't able to train it as much as I wanted. However. I was able to improve it by a few percents while testing hyperparameters, while not overfitting too much. With an accuracy of 61.6%, I am satisfied.
 
+<br>
 
 - [ ] Export a clean dataframe/CSV on Kaggle for other users (Cancelled)
 
@@ -216,14 +222,17 @@ This step was ultimately cancelled.
 
 Because I did a lot of work "by-hand" and because I had to join a few datasets (some who had "unknown" in Publisher and/or Developer), I don't feel like the dataset is perfect. For that reason, I won't be putting the dataset on Kaggle. However, it is available on my Github.
 
+<br>
 
 - [x] Hosting the project on a website for easy utilization
 
 While I don't feel comfortable sharing the dataset at large, I still decided to deploy my Forecasting Model online, on Sreamlit. [Click here](https://capstoneproject-benji02.streamlit.app) to access it.
 
+<br>
 
 - [ ] Updating the dataset every quarter or every year, for maximum efficiency of the predictions (Work in progress)
 
+<br>
 <br>
 And of course, updating the README.md everytime I add new features or the project gets closer to completion.
 <br>
