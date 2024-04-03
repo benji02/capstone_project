@@ -109,7 +109,19 @@ st.write("This is the perfect tool to predict the Metacritic score of a game. \
         Enter the name, the publisher and the developer, and choose the genre, the platform type and \
         the platform type and you will get the Metascore range between Weak, Okay and Strong!")
 
-name = pd.Series([st.text_input("Name of the game")], name='name')
+
+
+col1, col2 = st.columns(2)
+
+with col1:
+    name = pd.Series([st.text_input("Name of the game")], name='name')
+
+with col2:
+    genre_df = generate_encoded_df("Genre", genre_options, 'Genre_')
+
+
+
+
 
 col1, col2 = st.columns(2)
 
@@ -126,8 +138,7 @@ with col2:
 
 
 
-# Generate encoded DataFrames for each input
-genre_df = generate_encoded_df("Genre", genre_options, 'Genre_')
+
 
 col1, col2 = st.columns(2)
 
