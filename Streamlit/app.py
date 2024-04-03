@@ -28,7 +28,7 @@ gradient_bg = """
 """
 
 # Use st.write to include the custom HTML
-st.write(gradient_bg, unsafe_allow_html=True)
+st.markdown(gradient_bg, unsafe_allow_html=True)
 
 
 
