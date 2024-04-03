@@ -18,19 +18,6 @@ from xgboost import XGBClassifier
 
 
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
-
 
 
 
@@ -110,6 +97,26 @@ platform_brand_options = ['Microsoft', 'Nintendo', 'PC', 'Sony']
 platform_type_options = ['Handheld', 'HomeConsole', 'PC']
 
 st.image('./Images/header.jpeg')
+
+
+
+
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+
+
+
+
 
 st.header("Gaming Score Forecasting Model", divider=True, )
 
