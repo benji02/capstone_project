@@ -95,11 +95,11 @@ platform_type_options = ['Handheld', 'HomeConsole', 'PC']
 
 
 
-
+st.header("Gaming Score Forecasting Model", divider=True)
 
 st.image('./Images/header.jpeg')
 
-st.header("Gaming Score Forecasting Model", divider=True)
+
 
 
 
