@@ -128,8 +128,17 @@ with col2:
 
 # Generate encoded DataFrames for each input
 genre_df = generate_encoded_df("Genre", genre_options, 'Genre_')
-platform_brand_df = generate_encoded_df("Platform Brand", platform_brand_options, 'Platform_Brand_')
-platform_type_df = generate_encoded_df("Platform Type", platform_type_options, 'Platform_Type_')
+
+col1, col2 = st.columns(2)
+
+with col1:
+    platform_brand_df = generate_encoded_df("Platform Brand", platform_brand_options, 'Platform_Brand_')
+
+with col2:
+    platform_type_df = generate_encoded_df("Platform Type", platform_type_options, 'Platform_Type_')
+
+
+
 
 
 # Create a button to trigger predictions
