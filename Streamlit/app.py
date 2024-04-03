@@ -89,6 +89,7 @@ platform_brand_options = ['Microsoft', 'Nintendo', 'PC', 'Sony']
 
 platform_type_options = ['Handheld', 'HomeConsole', 'PC']
 
+st.image('./Images/header.jpeg')
 
 st.header("Gaming Score Forecasting Model", divider=True, )
 
