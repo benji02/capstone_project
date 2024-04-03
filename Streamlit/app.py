@@ -16,13 +16,6 @@ from xgboost import XGBClassifier
 
 
 
-
-
-
-
-
-
-
 stemmer = nltk.stem.PorterStemmer()
 
 ENGLISH_STOP_WORDS = stopwords.words('english')
@@ -56,6 +49,8 @@ def my_tokenizer(sentence):
 
 
 
+
+
 def generate_encoded_df(label, options, prefix):
     # UI input
     selected_option = st.selectbox(label, options=options, key=label)
@@ -70,6 +65,8 @@ def generate_encoded_df(label, options, prefix):
     encoded_df.columns = [prefix + col for col in encoded_df.columns]
 
     return encoded_df
+
+
 
 # Load the models from the file
 with open('./Models/xgb_model.pkl', 'rb') as file:
@@ -101,6 +98,17 @@ st.image('./Images/header.jpeg')
 
 
 
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: linear-gradient(to bottom, #4b6cb7, #182848);
+        color: #ffffff;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
@@ -118,20 +126,6 @@ st.write("This is the perfect tool to predict the Metacritic score of a game. \
 name = pd.Series([st.text_input("Name of the game")], name='name')
 publisher = pd.Series([st.text_input("Publisher")], name='publisher')
 developer = pd.Series([st.text_input("Developer")], name='developer')
-
-
-
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 
 
