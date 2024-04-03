@@ -15,18 +15,6 @@ from sklearn.preprocessing import RobustScaler
 from xgboost import XGBClassifier
 
 
-# Define the CSS for the gradient background
-gradient_bg = """
-    <style>
-        body {
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-        }
-    </style>
-"""
-
-# Apply the gradient background
-st.markdown(gradient_bg, unsafe_allow_html=True)
-
 
 
 stemmer = nltk.stem.PorterStemmer()
