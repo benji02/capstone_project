@@ -19,10 +19,7 @@ from xgboost import XGBClassifier
 gradient_bg = """
     <style>
         body {
-            background-color: #f7f7f7; /* Fallback color */
-            background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
-            background-size: cover;
-            background-attachment: fixed;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
         }
     </style>
 """
