@@ -16,17 +16,17 @@ from xgboost import XGBClassifier
 
 
 
-css = """
+gradient_bg = """
 <style>
-body {
-    background: linear-gradient(to bottom, #4b6cb7, #182848); /* Set the gradient background */
-    color: #ffffff; /* Set the text color for better contrast */
-}
+    body {
+        background-image: linear-gradient(to bottom, #4b6cb7, #182848); /* Set the gradient background */
+        color: #ffffff; /* Set the text color for better contrast */
+    }
 </style>
 """
 
-# Use st.markdown to include the custom CSS
-st.markdown(css, unsafe_allow_html=True)
+# Use st.write to include the custom HTML
+st.write(gradient_bg, unsafe_allow_html=True)
 
 
 stemmer = nltk.stem.PorterStemmer()
