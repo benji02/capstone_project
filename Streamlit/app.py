@@ -18,17 +18,16 @@ from xgboost import XGBClassifier
 
 
 
-gradient_bg = """
+page_bg_img = '''
 <style>
-    body {
-        background-image: linear-gradient(to bottom, #4b6cb7, #182848); /* Set the gradient background */
-        color: #ffffff; /* Set the text color for better contrast */
-    }
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
 </style>
-"""
+'''
 
-# Use st.write to include the custom HTML
-st.markdown(gradient_bg, unsafe_allow_html=True)
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 
