@@ -110,8 +110,16 @@ st.write("This is the perfect tool to predict the Metacritic score of a game. \
         the platform type and you will get the Metascore range between Weak, Okay and Strong!")
 
 name = pd.Series([st.text_input("Name of the game")], name='name')
-publisher = pd.Series([st.text_input("Publisher")], name='publisher')
-developer = pd.Series([st.text_input("Developer")], name='developer')
+
+col1, col2 = st.columns(2)
+
+with col1:
+    publisher = pd.Series([st.text_input("Publisher")], name='publisher')
+
+with col2:
+    developer = pd.Series([st.text_input("Developer")], name='developer')
+
+
 
 
 
