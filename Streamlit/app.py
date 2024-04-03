@@ -98,22 +98,6 @@ st.image('./Images/header.jpeg')
 
 
 
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: linear-gradient(to bottom, #4b6cb7, #182848);
-        color: #ffffff;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
-
-
-
 
 st.header("Gaming Score Forecasting Model", divider=True, )
 
