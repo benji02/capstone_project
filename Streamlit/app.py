@@ -101,17 +101,6 @@ st.image('./Images/header.jpeg')
 
 
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 
 
@@ -129,6 +118,21 @@ st.write("This is the perfect tool to predict the Metacritic score of a game. \
 name = pd.Series([st.text_input("Name of the game")], name='name')
 publisher = pd.Series([st.text_input("Publisher")], name='publisher')
 developer = pd.Series([st.text_input("Developer")], name='developer')
+
+
+
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
 
 
 
